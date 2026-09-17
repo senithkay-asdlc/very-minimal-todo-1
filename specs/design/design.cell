@@ -1,4 +1,5 @@
 title Minimal Todo
+# design converged with specs/requirements/prd.md
 
 component todo-webapp as "Todo Web App" web-application
 component todo-api as "Todo API" service
