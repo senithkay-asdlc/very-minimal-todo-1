@@ -1,0 +1,17 @@
+{
+  "name": "todo-webapp",
+  "type": "web-application",
+  "version": "0.1.0",
+  "language": "TypeScript",
+  "buildpack": "docker",
+  "appPath": "todo-webapp",
+  "entrypoint": "deployment/web-application",
+  "exposure": "internet",
+  "dependencies": [
+    { "kind": "component", "name": "todo-api", "description": "Lists, creates, and completes the signed-in user's todos." },
+    { "kind": "platform-resource", "name": "user-auth", "resourceType": "thunder-app", "parameters": {}, "description": "Signs users up and in via the platform IDP." }
+  ],
+  "description": "Single-page React app for the minimal todo product. Lets a signed-in user view their private todo list, create a new todo, and mark a todo as done. Carries no editing or deleting UI, and holds no data itself — all todo state lives behind todo-api.",
+  "stories": [1, 2, 3, 4, 5],
+  "skillsPinned": ["wireframes", "react-webapp", "oxygen-ui-design-system", "thunder-authentication"]
+}
